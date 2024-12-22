@@ -10,18 +10,22 @@
             margin: 0;
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #f5f5f5;
+            background-color: #1a1a2e;
         }
         header {
-            background: #003b73;
+            background: #16213e;
             color: white;
             padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         header nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
             margin: 0;
             padding: 0;
         }
@@ -32,40 +36,40 @@
             transition: color 0.3s ease;
         }
         header nav ul li a:hover {
-            color: #ffb703;
+            color: #e94560;
         }
         section {
             padding: 3rem 2rem;
             text-align: center;
         }
         section:nth-child(even) {
-            background: #f4f4f9;
+            background: #0f3460;
         }
         h1, h2 {
-            color: #003b73;
+            color: #e94560;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
         }
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
         ul {
             list-style: none;
             padding: 0;
-            text-align: left;
-            max-width: 800px;
+            max-width: 900px;
             margin: 1rem auto;
+            text-align: left;
         }
         ul li {
-            background: #e0f7fa;
+            background: #1b1b2f;
             padding: 1rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         footer {
-            background: #003b73;
+            background: #16213e;
             color: white;
             text-align: center;
             padding: 1rem 0;
@@ -75,7 +79,7 @@
             margin: 0;
         }
         a {
-            color: #ffb703;
+            color: #e94560;
             text-decoration: none;
             font-weight: bold;
         }
@@ -84,19 +88,31 @@
             height: auto;
             border-radius: 50%;
             margin-top: 1rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         .hero {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #003b73, #0077b6);
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #16213e, #0f3460);
             color: white;
         }
         .hero p {
             max-width: 600px;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+        }
+        .card {
+            background: #1b1b2f;
+            padding: 1.5rem;
+            margin: 1rem auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card h3 {
+            margin: 0 0 0.5rem;
+            color: #e94560;
         }
     </style>
 </head>
@@ -132,39 +148,56 @@
     <!-- Education Section -->
     <section id="education">
         <h2>Education</h2>
-        <ul>
-            <li><strong>Integrated MSc in Physics</strong>, CEBS, Mumbai (November 2021 – May 2026)</li>
-            <li><strong>Higher Secondary Education</strong>, BSF Senior Secondary Residential School, Kadamtala (April 2014 – May 2021)</li>
-        </ul>
+        <div class="card">
+            <h3>Integrated MSc in Physics</h3>
+            <p>CEBS, Mumbai (November 2021 – May 2026)</p>
+        </div>
+        <div class="card">
+            <h3>Higher Secondary Education</h3>
+            <p>BSF Senior Secondary Residential School, Kadamtala (April 2014 – May 2021)</p>
+        </div>
     </section>
 
     <!-- Work Experience Section -->
     <section id="experience">
         <h2>Experience</h2>
-        <ul>
-            <li><strong>Masters Reading Project</strong> (August 2024 – December 2024):<br>
-                Worked on using ODMR for determining the properties of NV- Centers in Diamonds.
-            </li>
-            <li><strong>Summer Research Student</strong> (May 2024 – July 2024):<br>
-                Conducted AMS Data Analysis on Antiproton-Proton Flux Calculation at Institute of Physics, Academia Sinica, Taiwan.
-            </li>
-            <li><strong>Summer Research Student</strong> (May 2023 – July 2023):<br>
-                Studied CTAB solution's contact angle profile and designed a Chamber Cell for continuous liquid flow at IIT Bombay.
-            </li>
-            <li><strong>Winter Tutorial Project</strong> (December 2022 – January 2023):<br>
-                Developed computational solutions for ODEs using the RK4 method in Python at CEBS.
-            </li>
-        </ul>
+        <div class="card">
+            <h3>Masters Reading Project</h3>
+            <p>August 2024 – December 2024</p>
+            <p>Worked on using ODMR for determining the properties of NV- Centers in Diamonds.</p>
+        </div>
+        <div class="card">
+            <h3>Summer Research Student</h3>
+            <p>May 2024 – July 2024</p>
+            <p>Conducted AMS Data Analysis on Antiproton-Proton Flux Calculation at Institute of Physics, Academia Sinica, Taiwan.</p>
+        </div>
+        <div class="card">
+            <h3>Summer Research Student</h3>
+            <p>May 2023 – July 2023</p>
+            <p>Studied CTAB solution's contact angle profile and designed a Chamber Cell for continuous liquid flow at IIT Bombay.</p>
+        </div>
+        <div class="card">
+            <h3>Winter Tutorial Project</h3>
+            <p>December 2022 – January 2023</p>
+            <p>Developed computational solutions for ODEs using the RK4 method in Python at CEBS.</p>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <ul>
-            <li><strong>Particle Identification in AMS:</strong> A detailed analysis of particle trajectories and properties using ROOT C++.</li>
-            <li><strong>Monte Carlo Rigidity Analysis:</strong> Conducted simulations for particle rigidity distributions.</li>
-            <li><strong>ODMR Study:</strong> Explored the properties of NV- Centers in Diamonds.</li>
-        </ul>
+        <div class="card">
+            <h3>Particle Identification in AMS</h3>
+            <p>A detailed analysis of particle trajectories and properties using ROOT C++.</p>
+        </div>
+        <div class="card">
+            <h3>Monte Carlo Rigidity Analysis</h3>
+            <p>Conducted simulations for particle rigidity distributions.</p>
+        </div>
+        <div class="card">
+            <h3>ODMR Study</h3>
+            <p>Explored the properties of NV- Centers in Diamonds.</p>
+        </div>
     </section>
 
     <!-- Skills Section -->
